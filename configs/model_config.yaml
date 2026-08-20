@@ -1,0 +1,33 @@
+# Registry of supported summarization models.
+# "key" is what you set as model.active_model in configs/config.yaml
+
+models:
+  t5-small:
+    hf_checkpoint: t5-small
+    family: t5
+    requires_prefix: "summarize: "
+
+  flan-t5-small:
+    hf_checkpoint: google/flan-t5-small
+    family: flan-t5
+    requires_prefix: "summarize: "
+
+  flan-t5-base:
+    hf_checkpoint: google/flan-t5-base
+    family: flan-t5
+    requires_prefix: "summarize: "
+
+  bart-base:
+    hf_checkpoint: facebook/bart-base
+    family: bart
+    requires_prefix: ""
+
+  bart-large-cnn:
+    hf_checkpoint: facebook/bart-large-cnn
+    family: bart
+    requires_prefix: ""
+
+  pegasus-xsum:
+    hf_checkpoint: google/pegasus-xsum
+    family: pegasus
+    requires_prefix: ""
