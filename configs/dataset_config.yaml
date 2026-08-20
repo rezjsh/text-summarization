@@ -1,0 +1,21 @@
+# Dataset subset presets for Colab-friendly experimentation.
+# "size" values are number of ROWS taken (train/val/test each), None = full split.
+
+subsets:
+  dev:
+    train_size: 500
+    val_size: 100
+    test_size: 100
+    description: "Tiny subset for fast smoke-testing the whole pipeline in <5 min."
+
+  medium:
+    train_size: 20000
+    val_size: 2000
+    test_size: 2000
+    description: "Default subset. Trains a small/base model to a reasonable ROUGE in a Colab session."
+
+  full:
+    train_size: null
+    val_size: null
+    test_size: null
+    description: "Entire CNN/DailyMail dataset (~287k/13k/11k rows). Needs a GPU with more time/VRAM."
